@@ -1,0 +1,366 @@
+.header {
+    height: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(211, 211, 211, 0.2);
+    padding: 10px 20px;
+    backdrop-filter: blur(0px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: backdrop-filter 0.3s ease-in-out;
+    color: rgb(19, 17, 17);
+    z-index: 100;
+  }
+  
+  @keyframes blurEffect {
+    0% {
+      backdrop-filter: blur(0px);
+    }
+  
+    100% {
+      backdrop-filter: blur(10px);
+    }
+  }
+  
+  .left-options {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .hamburger-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: black;
+    padding-right: 25px;
+  }
+  
+  .mobile-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  .mobile-menu.active {
+    display: flex;
+  }
+  
+  .right-options {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .option {
+    text-decoration: none;
+    color: rgb(27, 24, 24);
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  .option:hover {
+    color: black;
+  }
+  
+  .logo1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(252, 118, 118);
+    text-decoration: none;
+  }
+  
+  .signin-button {
+    background-color: orange;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .signin-button:hover {
+    background-color: darkorange;
+  }
+  
+  .option1 {
+    text-decoration: none;
+    color: rgb(1, 0, 1);
+    font-weight: bold;
+    padding-top: 3px !important;
+    padding-left: 30px;
+    font-size: 16px;
+    transition: color 0.3s ease;
+  }
+  
+  @media (max-width: 768px) {
+  
+    .hamburger-icon {
+      display: block;
+      margin-right: 20px;
+    }
+  
+    .right-options {
+      display: none;
+    }
+  
+    .signin-button1 {
+      background-color: orange;
+      color: white;
+      padding: 8px 10px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 12px;
+      transition: background-color 0.3s ease;
+    }
+  
+    .signin-button1:hover {
+      background-color: darkorange;
+    }
+  
+    .signin-button {
+      display: none;
+    }
+  
+    .option1 {
+      display: none;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .mobile-menu {
+      display: none;
+    }
+  
+    .signin-button1 {
+      display: none;
+    }
+  }
+  
+  .site-logo {
+    height: 60px;
+    background-color: black;
+    width: 80px;
+    padding: 0px;
+    margin: 0px;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .signin-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .signin-button:hover {
+    background-color: #45a049;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+  
+  .signin-button {
+    background-color: #4caf50;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .signin-button:hover {
+    background-color: #45a049;
+  }
+  
+  .logout-button {
+    background-color: #ea6a2f;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .option {
+    padding-top: 7px;
+  }
+  .header {
+    height: 60px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(211, 211, 211, 0.2);
+    padding: 10px 20px;
+    backdrop-filter: blur(0px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: backdrop-filter 0.3s ease-in-out;
+    color: rgb(19, 17, 17);
+    z-index: 100;
+  }
+  
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    z-index: 1000; 
+    height: 100vh; 
+    width: 100vw;  
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    max-width: 90%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+.header {
+  height: 60px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(211, 211, 211, 0.2); 
+  padding: 10px 20px;
+  backdrop-filter: blur(0px); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: backdrop-filter 0.3s ease-in-out; 
+  color: rgb(19, 17, 17); 
+  z-index: 100; 
+  max-width: 100%; 
+  margin: 0 auto; 
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 15px; 
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  .left-options, .right-options {
+    flex-wrap: wrap; 
+  }
+
+  .site-logo {
+    height: 50px; 
+    width: 60px;
+  }
+}
+
+@media (min-width: 769px) {
+  .header {
+    padding: 10px 20px;
+  }
+
+  .site-logo {
+    height: 60px;
+    width: 80px;
+  }
+}
